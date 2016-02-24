@@ -31,6 +31,8 @@ angular
             //a POST request containing the fields "user_id" and "content"
             //and returns the field "id" containing the id of the sent message 
             OAuth.popup('flickr', function(err, res) {
+                console.log(err);
+                console.log(res);
                 res.get({
                     url: 'http://api.flickr.com/services/rest/?method=flickr.photos.search',
                     data: {
