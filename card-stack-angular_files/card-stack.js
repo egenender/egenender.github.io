@@ -26,7 +26,7 @@ angular
 
         $scope.throwoutdown = function (eventName, eventObject) {
             console.log('throwoutdown', eventObject);
-            OAuth.initialize('6dcef04229086c5c46331c26cbd205a4');
+            OAuth.initialize('MpnCNnhVAq_zL089ua883AevC1o');
             //Let's say the /message endpoint on the provider waits for
             //a POST request containing the fields "user_id" and "content"
             //and returns the field "id" containing the id of the sent message 
