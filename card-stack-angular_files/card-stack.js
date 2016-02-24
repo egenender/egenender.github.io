@@ -34,7 +34,7 @@ angular
             .done(function(result) {
             result.post('http://api.flickr.com/services/rest/?method=flickr.photos.comments.addComment', {
                 data: {
-                    api_key: '2d804932f4f57e63a9cd11845c2181d7',
+                    api_key: 'MpnCNnhVAq_zL089ua883AevC1o',
                     photo_id: '25111797301',
                     comment_text: 'Hello Mr. 93 !'
                 }
@@ -45,10 +45,12 @@ angular
             })
             .fail(function (err) {
                 //handle error with err
+                console.log(err);
             });
             })
             .fail(function (err) {
                 //handle error with err
+                console.log(err);
             });
         };
 
