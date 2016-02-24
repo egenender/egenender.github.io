@@ -30,7 +30,7 @@ angular
             //Let's say the /message endpoint on the provider waits for
             //a POST request containing the fields "user_id" and "content"
             //and returns the field "id" containing the id of the sent message 
-            OAuth.popup('flickr', function(res) {
+            OAuth.popup('flickr', function(res)
             .done(function(result) {
             result.post('http://api.flickr.com/services/rest/?method=flickr.photos.comments.addComment', {
                 data: {
