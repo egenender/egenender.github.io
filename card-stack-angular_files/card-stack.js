@@ -31,12 +31,12 @@ angular
             //a POST request containing the fields "user_id" and "content"
             //and returns the field "id" containing the id of the sent message 
             OAuth.popup('flickr', function(err, res) {
-                res.get({
-                    url: 'http://api.flickr.com/services/rest/?method=flickr.photos.search',
+                res.post({
+                    url: 'http://api.flickr.com/services/rest/?method=flickr.photos.comments.addComment',
                     data: {
-                        text: "flower",
-                        format: "json",
-                        nojsoncallback: 1
+                        api_key: '2d804932f4f57e63a9cd11845c2181d7',
+                        photo_id: '25111797301',
+                        comment_text: 'Hello Mr. 93 !'
                     }
                 }).done(function(data) {
                     console.log(data)
