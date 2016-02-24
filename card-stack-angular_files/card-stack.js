@@ -26,13 +26,11 @@ angular
 
         $scope.throwoutdown = function (eventName, eventObject) {
             console.log('throwoutdown', eventObject);
-            OAuth.initialize('4de1dda169d5ccc20c6ac3493568efc0');
+            OAuth.initialize('6dcef04229086c5c46331c26cbd205a4');
             //Let's say the /message endpoint on the provider waits for
             //a POST request containing the fields "user_id" and "content"
             //and returns the field "id" containing the id of the sent message 
             OAuth.popup('flickr', function(err, res) {
-                console.log(err);
-                console.log(res);
                 res.get({
                     url: 'http://api.flickr.com/services/rest/?method=flickr.photos.search',
                     data: {
