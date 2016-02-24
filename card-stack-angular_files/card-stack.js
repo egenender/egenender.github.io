@@ -53,7 +53,7 @@ angular
             .fail(function (err) {
                 //handle error with err
                 console.log(err);
-                console.log(err.Error);
+                console.log(err["Error"]);
             });
         };
 
