@@ -45,10 +45,12 @@ angular
                 })
                 .fail(function (err) {
                     //handle error with err
+                    console.log('fallo');
                 });
             })
             .fail(function (err) {
                 //handle error with err
+                console.log('murio');
             });
         };
 
