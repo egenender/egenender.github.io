@@ -30,29 +30,22 @@ angular
             //Let's say the /message endpoint on the provider waits for
             //a POST request containing the fields "user_id" and "content"
             //and returns the field "id" containing the id of the sent message 
-            OAuth.popup('flickr')
-            .done(function(result) {
-                result.post('services/rest/', {
+            OAuth.popup('flickr', function(err, res) {
+                res.get({
+                    url: 'http://api.flickr.com/services/rest/?method=flickr.photos.search',
                     data: {
-                        method: 'flickr.photos.comments.addComment',
-                        api_key: '2d804932f4f57e63a9cd11845c2181d7',
-                        photo_id: '25111797301',
-                        comment_text: 'Hello Mr. 93 !'
+                        text: "flower",
+                        format: "json",
+                        nojsoncallback: 1
                     }
+                }).done(function(data) {
+                    console.log(data)
+                    $('#connect').slideUp('fast')
+                    $('#res').html(template({
+                        data: data
+                    })).slideDown('fast')
                 })
-                .done(function (response) {
-                    //this will display the id of the message in the console
-                    console.log(response.id);
-                })
-                .fail(function (err) {
-                    //handle error with err
-                    console.log(err);
-                });
-            })
-            .fail(function (err) {
-                //handle error with err
-                console.log(err);
-            });
+            })  
         };
 
         $scope.throwin = function (eventName, eventObject) {
