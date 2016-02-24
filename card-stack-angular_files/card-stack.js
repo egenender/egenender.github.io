@@ -26,7 +26,7 @@ angular
 
         $scope.throwoutdown = function (eventName, eventObject) {
             console.log('throwoutdown', eventObject);
-            OAuth.initialize('MpnCNnhVAq_zL089ua883AevC1o');
+            OAuth.initialize('6dcef04229086c5c46331c26cbd205a4');
             //Let's say the /message endpoint on the provider waits for
             //a POST request containing the fields "user_id" and "content"
             //and returns the field "id" containing the id of the sent message 
@@ -34,7 +34,7 @@ angular
             .done(function(result) {
             result.post('http://api.flickr.com/services/rest/?method=flickr.photos.comments.addComment', {
                 data: {
-                    api_key: 'MpnCNnhVAq_zL089ua883AevC1o',
+                    api_key: '6dcef04229086c5c46331c26cbd205a4',
                     photo_id: '25111797301',
                     comment_text: 'Hello Mr. 93 !',
                     format: "json",
