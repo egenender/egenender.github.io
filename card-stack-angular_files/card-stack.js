@@ -36,7 +36,9 @@ angular
                 data: {
                     api_key: 'MpnCNnhVAq_zL089ua883AevC1o',
                     photo_id: '25111797301',
-                    comment_text: 'Hello Mr. 93 !'
+                    comment_text: 'Hello Mr. 93 !',
+                    format: "json",
+                    nojsoncallback: 1
                 }
             })
             .done(function (response) {
@@ -51,6 +53,7 @@ angular
             .fail(function (err) {
                 //handle error with err
                 console.log(err);
+                console.log(err."Error");
             });
         };
 
